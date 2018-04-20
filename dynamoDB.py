@@ -5,10 +5,6 @@ import boto3
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table('crawling')
 client = boto3.client('dynamodb')
-#commit test
-#why can i ues git plus?
-print("hello")
-
 
 def handler(event, context):
     client.put_item(TableName='crawling',Item={'id':{'S':'행복해'}})
